@@ -93,10 +93,11 @@ function createMap(earthquakes) {
      // For each event, create a marker and bind a popup with the place and time
            
         var earthquakeMarker = L.circle([event.geometry.coordinates[1], event.geometry.coordinates[0]], {
-            fillOpacity: 0.75,
+            opacity: 1,
+            fillOpacity: 1,
             color: color,
             fillColor: color,
-            radius: event.properties.mag * 1000
+            radius: event.properties.mag * 10000
             }).bindPopup("<h3>" + event.properties.place + "<h3><h3>" + Date(event.properties.time) + "<h3>");
         // Add the marker to the earthquakeMarkers array
         earthquakeMarkers.push(earthquakeMarker);
