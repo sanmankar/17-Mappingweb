@@ -60,6 +60,9 @@ function createMap(earthquakes) {
  }
 
  function createMarkers(response) {
+
+  console.log("In create markers")
+  
    var events = response.features;
 
    // Initialize an array to hold earthquake markers
